@@ -1,0 +1,27 @@
+.connected-user{
+	border: 1px solid black;
+	height: 400px;
+}
+.messages-go{
+	border: 1px solid black;
+	height: 440;
+}
+.buttons{
+	margin-top: 5px;
+}
+.message-to-send{
+	height: 100%;
+	margin-top: 30px;
+}
+input{
+	width: 100%;
+}
+.input-stuff{
+	padding: 0;
+}
+.form-control{
+	height: 45px;
+}
+.nav-section{
+	margin-bottom: 50px;
+}
