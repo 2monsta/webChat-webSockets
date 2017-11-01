@@ -10,6 +10,7 @@ app.use(express.static(__dirname + `/public`));
 
 
 var users = []
+// var messages = []
 var server = http.createServer(app);
 server.listen(8080);
 var io = socketio.listen(server);
@@ -17,10 +18,15 @@ var io = socketio.listen(server);
 io.on("connect", (data)=>{
 	//do the following is after we connected with scripts.js
 	// one of the events from scripts.js
-	
+
 	data.on("nameToServer", (dataName)=>{
 		users.push(dataName);
 		io.sockets.emit("nameToEveryone", users);
+	});
+
+	data.on("messageToServer", (dataMessage)=>{
+		// messages.push(dataMessage);
+		io.sockets.emit("messageToEveryone", dataMessage);
 	})
 })
 

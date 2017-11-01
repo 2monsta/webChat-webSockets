@@ -25,3 +25,6 @@ input{
 .nav-section{
 	margin-bottom: 50px;
 }
+.messages-go{
+	vertical-align: bottom;
+}
